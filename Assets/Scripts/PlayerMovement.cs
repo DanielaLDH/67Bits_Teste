@@ -6,6 +6,7 @@ using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Tooltip("Velocidade de movimento do jogador.")]
     [SerializeField] float speed;
 
     private Vector2 input;
@@ -28,11 +29,13 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(Vector3.down * 9.81f * Time.deltaTime);
     }
 
+    //lê os inputs do jogador para movimento
     public void PlayerMove(InputAction.CallbackContext value)
     {
         input = value.ReadValue<Vector2>();
     }
 
+    //gira o jogador na direção do movimento
     void RotatePlayer()
     {
         Vector3 forward = cam.TransformDirection(Vector3.forward);

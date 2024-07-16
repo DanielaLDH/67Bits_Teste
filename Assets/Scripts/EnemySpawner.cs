@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [Tooltip("Prefab do inimigo que será spawnado.")]
     [SerializeField] GameObject enemyPrefab;
-    [SerializeField] float spawnInterval;
-    [SerializeField] float lifeTime;
 
+    [Tooltip("Intervalo de tempo entre cada spawn.")]
+    [SerializeField] float spawnInterval;
+
+    [Tooltip("Ponto mínimo da área de spawn.")]
     [SerializeField] Vector3 spawnAreaMin;
+
+    [Tooltip("Ponto máximo da área de spawn.")]
     [SerializeField] Vector3 spawnAreaMax;
 
     // Start is called before the first frame update
@@ -23,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
+    //Gera inimigos em intervalos regulares
     IEnumerator SpawnEnemies()
     {
         while (true)
@@ -32,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    //instancia um novo inimigo em uma posição aleatória dentro da área de spawn
     void SpawnEnemy()
     {
         Vector3 spawnPosition = new Vector3(

@@ -453,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254166709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218325, y: 0.000000017077465, z: -0.0000000021023316, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218327, y: -0.000000017077465, z: 0.0000000021023319, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1323,7 +1323,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 250, y: 200}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854430405
 MonoBehaviour:
@@ -1687,7 +1687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12218324, y: 0.00000003494626, z: -0.0000000043020805, w: 0.9925076}
+  m_LocalRotation: {x: 0.122183286, y: -0.00000003494626, z: 0.0000000043020822, w: 0.9925076}
   m_LocalPosition: {x: 1.14, y: 6.25, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2143,7 +2143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level UP (30 Coins)
+  m_Text: Level UP (12 Coins)
 --- !u!222 &1144838117
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2223,7 +2223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184254652}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.104109846, y: -0.000000017639547, z: 0.0000000018464847,
+  m_LocalRotation: {x: 0.104109846, y: 0.000000017639554, z: -0.0000000018464854,
     w: 0.99456584}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2611,7 +2611,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -250, y: 200}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731937960
 MonoBehaviour:
@@ -2718,7 +2718,6 @@ MonoBehaviour:
   enemyPrefab: {fileID: 3510208812998465244, guid: 07271ff4cc02a8f49a8918dde70adbca,
     type: 3}
   spawnInterval: 4
-  lifeTime: 10
   spawnAreaMin: {x: -6, y: 1.09, z: -30}
   spawnAreaMax: {x: 26, y: 1.09, z: 7}
 --- !u!4 &1845493252
@@ -2895,6 +2894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879812834573306358, guid: daf8ae0ebbfb1ff4ea747a401f83e79f,
+        type: 3}
+      propertyPath: lvlCost
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6879812834573306358, guid: daf8ae0ebbfb1ff4ea747a401f83e79f,
         type: 3}

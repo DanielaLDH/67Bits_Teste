@@ -7,19 +7,28 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [Tooltip("Cores que o jogador pode ter ao subir de nível.")]
     [SerializeField] Color[] levelUpColors;
+
+    [Tooltip("Renderizador do jogador para mudar a cor.")]
     [SerializeField] GameObject playerRender;
+
+    [Tooltip("Capacidade máxima de inimigos que podem ser empilhados.")]
     [SerializeField] int stackCapacity;
+
+    [Tooltip("Offset vertical entre os inimigos empilhados.")]
     [SerializeField] float stackingOffset ;
+
+    [Tooltip("Fator de inércia que afeta a suavidade do movimento dos inimigos empilhados.")]
     [SerializeField] float inertiaFactor ; 
+
+
     [SerializeField] List<GameObject> stackedEnemies = new List<GameObject>();
 
     public float money;
-    public float lvlCost;
 
-    private Rigidbody rb;
-    private Vector3 MoveInput;
-    private Vector3 MoveVelocity;
+    [Tooltip("Custo para subir de nível.")]
+    public float lvlCost;
 
 
     private void FixedUpdate()
@@ -27,7 +36,7 @@ public class Player : MonoBehaviour
         UpdateStackEnemyPositions();
     }
 
-
+    //coleta inimigo
     void Punch(GameObject enemy)
     {
         if (stackedEnemies.Count < stackCapacity && !stackedEnemies.Contains(enemy) )
@@ -39,6 +48,7 @@ public class Player : MonoBehaviour
 
     }
 
+    //atualiza a posição dos inimigos empilhados nas costas do jogador
     void UpdateStackEnemyPositions()
     {
         for(int i = 0; i < stackedEnemies.Count; i++)
@@ -58,6 +68,7 @@ public class Player : MonoBehaviour
         
     }
 
+    //desativa e remove os inimigos empilhados, adicionando dinheiro ao jogador
     IEnumerator DesactivateEnemy()
     {
         while (stackedEnemies.Count > 0)
@@ -79,8 +90,6 @@ public class Player : MonoBehaviour
         playerRender.GetComponent<Renderer>().material.color = levelUpColors[lvl -1];
 
     }
-
-
 
     private void OnTriggerEnter(Collider other)
     {
